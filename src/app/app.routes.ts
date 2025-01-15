@@ -11,9 +11,4 @@ export const routes: Routes = [
     {path:'cart',component:CartComponent},
     {path:'user',component:UserComponent},
     {path:'login',component:LoginComponent}
-
-
-
-
-
 ];

@@ -1,3 +1,21 @@
-<div *ngFor="let data of products">
+<!-- <div *ngFor="let data of products">
     <h2>{{data.title}}</h2>
-</div>
+</div> -->
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let product of products">
+        <div class="card shadow-sm">
+          <img [src]="product.image" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Category: <span class="text-primary">{{product.category}}</span></h5>
+            <p class="card-text">ID: <strong>#{{product.id}}</strong></p>
+            <p class="card-text">Price: <span class="fw-bold text-success">{{product.price}}</span></p>
+            <p class="card-text">Rating: 
+              <span class="text-warning">★★★★☆</span> ({{product.rating.rate}})
+            </p>
+            <a href="#" class="btn btn-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

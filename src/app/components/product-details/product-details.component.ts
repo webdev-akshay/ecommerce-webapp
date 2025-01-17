@@ -12,6 +12,7 @@ import { FormsModule} from '@angular/forms';
 export class ProductDetailsComponent implements OnInit {
   allProducts:any[]=[];
   products:any[]=[];
+  categories:any[]=[];
   searchProducts:string=''
   constructor(private productService:ProductService){}
   
@@ -30,6 +31,12 @@ export class ProductDetailsComponent implements OnInit {
     this.allProducts=data;
     this.products=[...this.allProducts]
    })
+  }
+  getAllCategories(){
+    let url="/categories"
+    this.productService.getProducts(url).subscribe((data:any)=>{
+      this.categories=data;
+    })
   }
   ngOnInit(): void {
     this.getAllProducts()

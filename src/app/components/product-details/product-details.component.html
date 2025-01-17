@@ -1,11 +1,7 @@
-<!-- <div *ngFor="let data of products">
-    <h2>{{data.title}}</h2>
-</div> -->
 <div class="searchbar-container">
   <div class="gradient-shadow"></div>
   <div class=" d-flex align-items-center">
-    <input id="input" [(ngModel)]="searchProducts" placeholder="Type something...">
-  <button style="width: 100px;" (click)="filterProducts()">Search</button>
+    <input id="input" [(ngModel)]="searchProducts" (input)="filterProducts()" placeholder="Type something...">
   </div>
 </div>
 <div class="container mt-5">

@@ -10,7 +10,9 @@ export class ProductService {
   private url=envirnonment.apiUrl;
   constructor(private http:HttpClient) { }
 
-  getProducts():Observable<any>{
+  getProducts(query:string):Observable<any>{
+    // const searchUrl = query ? `${this.url}/products?category_like=${query}` : `${this.url}/products`;
+    // return this.http.get(searchUrl)
     return this.http.get(`${this.url}/products`)
   }
 }

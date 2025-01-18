@@ -405,13 +405,11 @@ h4 {
 	background-color:#f5f5f5;
 }
 
-/* aniketrod
--------------------------------------------------------------- */
-.aniketrod {
+.outer {
 	position:relative;
 }
 
-.aniketrod > .overlay {
+.outer > .overlay {
 	content:'';
 	position:absolute;
 	width:100%;
@@ -429,7 +427,7 @@ h4 {
 	transition:all 0.3s ease-in-out;
 }
 
-.aniketrod > .overlay.show {
+.outer > .overlay.show {
 	opacity:1;
 	display:block;
 }
@@ -691,8 +689,6 @@ ul.flat-unstyled li > ul > li > a {
 /* Top Search */
 .top-search {
 	padding:27px 0;
-	padding-left:47px;
-	margin-right:-21px;
 }
 
 .top-search form.form-search {

@@ -114,7 +114,7 @@
                                         <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </div>
                                     <div class="box-search">
-                                        <input type="text" name="search" #searchInput (input)="onSearch(searchInput.value)" placeholder="Search what you looking for ?">   
+                                        <input type="text" name="search" [(ngModel)]="searchProducts" (input)="onSearch(searchProducts)" placeholder="Search what you looking for ?">   
                                          <span class="btn-search">
                                             <button type="submit" class="waves-effect"><i
                                                     class="fa fa-search"></i></button>
